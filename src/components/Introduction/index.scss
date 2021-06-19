@@ -1,0 +1,60 @@
+@import "../../styling/media-queries.scss";
+
+.Introduction {
+    padding: 0 25px;
+    .introduction-header {
+        text-align: center;
+        max-width: 460px;
+        position: relative;
+        background-color: #ecf1f7;
+        margin: 29px 0;
+        padding: 15px 0;
+        border-radius: 20px;
+
+        @include from-medium() {
+            max-width: 715px;
+        }
+
+        .brief-vision {
+            padding: 0 25px;
+            h3 {
+                font-size: 30px;
+                margin: 50px 0 0px;
+                font-weight: 600;
+            }
+            .summary {
+                font-size: 18px;
+                padding-left: 3px;
+                padding-right: 3px;
+                margin-top: 5px;
+            }
+        }
+
+        .icon-icon-vision {
+            font-family: "icomoon" !important;
+            color: #62b246;
+            font-size: 74px;
+            line-height: 74px;
+            position: absolute;
+            left: calc(50% - 37px);
+            top: -25px;
+
+            @include from-medium() {
+                font-size: 90px;
+                line-height: 90px;
+                left: calc(50% - 45px);
+                top: -38px;
+            }
+        }
+        .icon-icon-vision:before {
+            content: "\e904";
+        }
+    }
+    .healthcare-info {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+}

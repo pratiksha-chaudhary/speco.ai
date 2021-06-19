@@ -1,0 +1,23 @@
+@import "./styling/media-queries.scss";
+
+.App {
+    text-align: center;
+    padding: 0 5vw;
+
+    @include from-medium() {
+        padding: 0 25vw;
+    }
+
+    .doctor-icon:before {
+        content: "\e901";
+    }
+
+    .patient-icon:before {
+        content: "\e902";
+    }
+
+    .doctor-icon.selected:before,
+    .patient-icon.selected:before {
+        color: #62B246;
+    }
+}

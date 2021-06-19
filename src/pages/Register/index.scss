@@ -1,0 +1,19 @@
+@import "../../styling/media-queries.scss";
+
+.Register {
+
+    @include from-medium() {
+        padding: 0 5vw;
+    }
+
+    .header {
+        font-size: 34px;
+        font-weight: bolder;
+        line-height: 44px;
+    }
+
+    .user-list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,20 @@
+.User {
+    width: 35vw;
+    text-align: center;
+    .icon-container {
+        font-family: "icomoon" !important;
+        border-radius: 20px;
+        border: 2px solid #cddbec;
+        font-size: 66px;
+        padding: 5vh;
+        margin: 5vh;
+    }
+
+    .icon-container.selected {
+        border: 2px solid #62B246;
+    }
+    .user-title {
+        margin: 3vh;
+        font-size: 18px;
+    }
+}
