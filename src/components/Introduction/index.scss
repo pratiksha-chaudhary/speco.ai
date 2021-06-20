@@ -1,5 +1,5 @@
-@import "../../styling/media-queries.scss";
-
+@import '../../styling/media-queries.scss';
+@import '../../styling/colors.scss';
 .Introduction {
     .introduction-header {
         text-align: center;
@@ -7,10 +7,6 @@
         background-color: #ecf1f7;
         padding: 1em 0;
         border-radius: 20px;
-
-        @include from-medium() {
-            // max-width: 715px;
-        }
 
         .brief-vision {
             padding: 0 25px;
@@ -28,8 +24,8 @@
         }
 
         .icon-icon-vision {
-            font-family: "icomoon" !important;
-            color: #62b246;
+            font-family: 'icomoon' !important;
+            color: $speco-green;
             font-size: 74px;
             line-height: 74px;
             position: absolute;
@@ -44,7 +40,7 @@
             }
         }
         .icon-icon-vision:before {
-            content: "\e904";
+            content: '\e904';
         }
     }
     .healthcare-info {

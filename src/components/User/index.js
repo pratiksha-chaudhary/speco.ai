@@ -6,8 +6,8 @@ const User = ({ userType, title, setUserType, currentUser }) => {
         setUserType(isSelected ? "" : userType);
     };
     return (
-        <div className="User" onClick={handleUserClick}>
-            <div className={`icon-container ${isSelected && "selected"}`}>
+        <div className="User">
+            <div className={`icon-container ${isSelected && "selected"}`} onClick={handleUserClick}>
                 <span
                     className={`${userType}-icon ${isSelected && "selected"}`}
                 ></span>

@@ -1,8 +1,10 @@
+@import '../../styling/colors.scss';
+
 .SubmitButton {
     color: white;
     text-decoration: none;
     div {
-        background-color: #3356a6;
+        background-color: $speco-blue;
         border-radius: 200px;
         font-size: 22px;
         color: white;
@@ -15,7 +17,7 @@
     }
 
     div.disabled {
-        background-color: #98a8ce;
+        background-color: $speco-light-blue;
     }
 }
 

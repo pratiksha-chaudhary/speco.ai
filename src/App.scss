@@ -1,4 +1,5 @@
 @import "./styling/media-queries.scss";
+@import "./styling/colors.scss";
 
 .App {
     text-align: center;
@@ -31,6 +32,6 @@
 
     .doctor-icon.selected:before,
     .patient-icon.selected:before {
-        color: #62B246;
+        color: $speco-green;
     }
 }

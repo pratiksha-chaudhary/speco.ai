@@ -1,20 +1,48 @@
+@import '../../styling/media-queries.scss';
+@import '../../styling/colors.scss';
+
 .User {
-    width: 35vw;
-    text-align: center;
+    width: 95%;
+    margin: 2vh;
+
+    @include from-medium() {
+        width: 250px;
+    }
     .icon-container {
-        font-family: "icomoon" !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: 'icomoon' !important;
         border-radius: 20px;
         border: 2px solid #cddbec;
-        font-size: 66px;
-        padding: 5vh;
-        margin: 5vh;
+        font-size: 90px;
+        width: 35vw;
+        height: 35vw;
+        margin: 0 auto;
+
+        @include from-small() {
+            font-size: 110px;
+            max-width: 190px;
+            max-height: 190px;
+        }
+
+        @include from-medium() {
+            font-size: 130px;
+            max-width: 210px;
+            max-height: 210px;
+        }
     }
 
     .icon-container.selected {
-        border: 2px solid #62B246;
+        border: 2px solid $speco-green;
     }
     .user-title {
-        margin: 3vh;
         font-size: 18px;
+        text-align: center;
+        margin: 1em 2em;
+        @include from-small() {
+            margin: 1em 4em;
+        }
     }
 }

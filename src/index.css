@@ -10,6 +10,9 @@ code {
     monospace;
 }
 
+*{
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'icomoon';
   src:  url('./assets/fonts/icons/icomoon.ttf?65ysi5') format('truetype'),
