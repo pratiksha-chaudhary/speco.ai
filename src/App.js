@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Survey from "./pages/Survey";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Submit from "./pages/Submit";
 
 function App() {
     return (
@@ -22,6 +23,9 @@ function App() {
                         </Route>
                         <Route path="/survey/:pageIndex">
                             <Survey />
+                        </Route>
+                        <Route path="/submit">
+                            <Submit />
                         </Route>
                     </Switch>
                 </Router>
