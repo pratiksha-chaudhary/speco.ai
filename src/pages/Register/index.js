@@ -24,7 +24,7 @@ function Register() {
                     currentUser={user}
                 />
             </div>
-            <SubmitButton text="Next" nextRoute={`/survey/0`} />
+            <SubmitButton text="Next" nextRoute={`/survey/0`} disabled={!user}/>
         </div>
     );
 }

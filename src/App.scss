@@ -2,8 +2,24 @@
 
 .App {
     text-align: center;
-    width: 40vw;
+    width: 90%;
     margin: 0 auto;
+
+    @include from-small() {
+
+    }
+
+    @include from-medium(){
+        width: 80%;
+    }
+
+    @include from-large(){
+        width: 60%;
+    }
+
+    @include from-extra-large(){
+        width: 55%;
+    }
 
     .doctor-icon:before {
         content: "\e901";

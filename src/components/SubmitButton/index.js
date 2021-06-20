@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 
 import './index.scss';
-const SubmitButton = ({ text, nextRoute }) => {
+const SubmitButton = ({ text, nextRoute, disabled = false }) => {
   return (
-    <NavLink to={nextRoute} className="SubmitButton">
-      <div>{text}</div>
+    <NavLink to={disabled ? '#' : nextRoute} className="SubmitButton">
+      <div className={`${disabled ? 'disabled' : ''}`}>{text}</div>
     </NavLink>
   );
 };

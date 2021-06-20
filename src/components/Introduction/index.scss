@@ -1,18 +1,15 @@
 @import "../../styling/media-queries.scss";
 
 .Introduction {
-    padding: 0 25px;
     .introduction-header {
         text-align: center;
-        max-width: 460px;
         position: relative;
         background-color: #ecf1f7;
-        margin: 29px 0;
-        padding: 15px 0;
+        padding: 1em 0;
         border-radius: 20px;
 
         @include from-medium() {
-            max-width: 715px;
+            // max-width: 715px;
         }
 
         .brief-vision {
@@ -52,9 +49,7 @@
     }
     .healthcare-info {
         font-size: 20px;
-        line-height: 30px;
         font-weight: 500;
-        max-width: 430px;
-        margin: 0 auto;
+        margin: 3em auto 1em;
     }
 }
