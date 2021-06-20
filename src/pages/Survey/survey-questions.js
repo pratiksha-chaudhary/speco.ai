@@ -1,6 +1,9 @@
+import PhoneNumber from "../../templates/PhoneNumber";
+
 export const doctorSurveyQuestions = [
     {
         question: "Please provide us your contact number",
+        template: PhoneNumber
     },
     {
         question: "Please provide us your email",

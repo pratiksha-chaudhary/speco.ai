@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import SubmitButton from '../../components/SubmitButton';
 import { useParams } from 'react-router-dom';
 import UserContext from '../../context/userContext';
@@ -10,17 +10,27 @@ import {
 import './index.scss';
 
 function Survey() {
+  const [response, setResponse] = useState();
   const { pageIndex } = useParams();
   const { user } = useContext(UserContext);
   const targetQuestions =
     user === userType.PATIENT ? patientSurveyQuestions : doctorSurveyQuestions;
   const id = parseInt(pageIndex);
+
+  const TemplateComponent = targetQuestions[id].template;
+
   return (
     <div className="Survey">
-      <h1>Survey {user}</h1>
-      <div>{targetQuestions[pageIndex].question}</div>
+      <h2>{targetQuestions[id].question}</h2>
       {pageIndex < targetQuestions.length - 1 && (
-        <SubmitButton text="Next" nextRoute={`/survey/${id + 1}`} />
+        <>
+          {<TemplateComponent setResponse={setResponse} />}
+          <SubmitButton
+            text="Next"
+            nextRoute={`/survey/${id + 1}`}
+            disabled={!response}
+          />
+        </>
       )}
       {pageIndex >= targetQuestions.length - 1 && (
         <SubmitButton text="Next" nextRoute="/submit" />
