@@ -1,17 +1,16 @@
 .SubmitButton {
-    background-color: #3356a6;
-    border-radius: 200px;
-    font-size: 22px;
     color: white;
-    min-width: 130px;
-    width: fit-content;
-    height: 56px;
-    line-height: 56px;
-    padding: 0 25px;
-    margin: 30px auto;
-
-    a {
+    text-decoration: none;
+    div {
+        background-color: #3356a6;
+        border-radius: 200px;
+        font-size: 22px;
         color: white;
-        text-decoration: solid;
+        min-width: 130px;
+        width: fit-content;
+        height: 56px;
+        line-height: 56px;
+        padding: 0 25px;
+        margin: 30px auto;
     }
 }
