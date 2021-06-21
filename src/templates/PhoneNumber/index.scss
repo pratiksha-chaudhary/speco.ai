@@ -1,6 +1,19 @@
+@import '../../styling/colors.scss';
+
 .PhoneInput {
-    padding: 0 2rem 5rem;
+    padding: 1rem 0 1rem 1rem;
+    border: 2px solid $speco-light-blue;
+    border-radius: 10px;
+    height: 2.8rem;
+    width: 80%;
+    margin: 0 auto;
     input {
         font-size: 20px;
+        border: none;
+        margin-left: 1rem;
+    }
+
+    input:focus-visible {
+        outline: none;
     }
 }
