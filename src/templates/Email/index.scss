@@ -1,18 +1,20 @@
 @import '../../styling/colors.scss';
 
-.PhoneInput {
-    padding: 1rem 0 1rem 1rem;
+.Email{
+    padding: 1rem 0;
     border: 2px solid $speco-light-blue;
     border-radius: 10px;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
     input {
         font-size: 20px;
         border: none;
-        margin-left: 1rem;
+        width: 95%;
     }
 
     input:focus-visible {
         outline: none;
     }
+
 }

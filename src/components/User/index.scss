@@ -36,6 +36,9 @@
 
     .icon-container.selected {
         border: 2px solid $speco-green;
+        background-image: url("../../assets/images/icons/icon-checked-circle.svg");
+        background-position: right 10px top 10px;
+        background-repeat: no-repeat;
     }
     .user-title {
         font-size: 18px;

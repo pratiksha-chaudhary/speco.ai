@@ -24,7 +24,7 @@ function Survey() {
       <h2>{targetQuestions[id].question}</h2>
       {pageIndex < targetQuestions.length - 1 && (
         <>
-          {<TemplateComponent setResponse={setResponse} />}
+          {<TemplateComponent setResponse={setResponse} options={targetQuestions[id].options}/>}
           <SubmitButton
             text="Next"
             nextRoute={`/survey/${id + 1}`}
