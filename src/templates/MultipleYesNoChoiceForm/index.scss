@@ -1,0 +1,82 @@
+@import '../../styling/colors.scss';
+
+.MultipleYesNoChoiceForm {
+    display: flex;
+    flex-direction: column;
+
+    .option {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border: 2px solid $speco-light-blue;
+        border-radius: 10px;
+        width: 80%;
+        margin: 1rem auto;
+        position: relative;
+
+        .toggle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: whitesmoke;
+            font-weight: 600;
+            input[type='checkbox'] {
+                position: relative;
+                margin: 0;
+                width: 70px;
+                height: 30px;
+                background: #909090;
+                appearance: none;
+                border-radius: 20px;
+                transition: 0.4s;
+                cursor: pointer;
+            }
+
+            input:checked[type='checkbox'] {
+                background: $speco-green;
+            }
+
+            input[type='checkbox']::before {
+                position: absolute;
+                z-index: 2;
+                content: '';
+                left: 0;
+                width: 30px;
+                height: 30px;
+                background: #fff;
+                border-radius: 50%;
+                transform: scale(0.9);
+                transition: 0.4s;
+            }
+
+            input:checked[type='checkbox']::before {
+                left: 40px;
+            }
+
+            .on-button {
+                position: absolute;
+                visibility: hidden;
+                transition: visibility 1s linear 300ms;
+                left: 8%;
+            }
+
+            .off-button {
+                position: absolute;
+                transition: visibility 1s linear 300ms;
+                right: 8%;
+            }
+
+            input:checked[type='checkbox'] ~ .on-button {
+                visibility: visible;
+            }
+
+            input:checked[type='checkbox'] ~ .off-button {
+                visibility: hidden;
+            }
+
+            input:not(:checked)[type='checkbox'] ~ .on-button {
+                visibility: hidden;
+            }
+        }
+    }
+}
