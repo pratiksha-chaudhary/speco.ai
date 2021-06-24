@@ -1,5 +1,6 @@
 import DefaultChoiceForm from "../../templates/DefaultChoiceForm";
 import Email from "../../templates/Email";
+import MultipleYesNoChoiceForm from "../../templates/MultipleYesNoChoiceForm";
 import PhoneNumber from "../../templates/PhoneNumber";
 
 export const doctorSurveyQuestions = [
@@ -20,7 +21,7 @@ export const doctorSurveyQuestions = [
     {
         question: "Do you use these applications?",
         options: ["Practo", "Clinisea", "EasyClinic", "Visual Doctor", "Other"],
-        template: DefaultChoiceForm
+        template: MultipleYesNoChoiceForm
     },
     {
         question: "Are you happy with your current solution?",
