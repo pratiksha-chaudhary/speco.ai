@@ -1,3 +1,4 @@
+import Option from '../../components/Option';
 import { useState } from 'react';
 import './index.scss';
 
@@ -10,13 +11,13 @@ const DefaultChoiceForm = ({ options, setResponse, freeFieldNeeded }) => {
   return (
     <div className="DefaultChoiceForm">
       {options.map((option, i) => (
-        <div
+        <Option
           key={i}
-          className={`option ${currentSelection === option && 'selected'}`}
           onClick={() => handleClick(option)}
+          selected={currentSelection === option}
         >
           {option}
-        </div>
+        </Option>
       ))}
       {freeFieldNeeded && (
         <div className="option">

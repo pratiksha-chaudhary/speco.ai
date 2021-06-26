@@ -2,20 +2,12 @@
 
 .Register {
 
-    @include from-medium() {
-        padding: 0 10vw;
-    }
-
-    @include from-large() {
-        padding: 0 15vw;
-    }
-
     .header {
         font-size: 34px;
     }
 
     .user-list {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }

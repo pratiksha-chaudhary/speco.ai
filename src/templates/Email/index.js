@@ -1,10 +1,11 @@
+import Option from '../../components/Option';
 import './index.scss';
 
 const Email = ({ setResponse }) => {
   return (
-    <div className="Email">
-      <input onChange={setResponse} placeholder="Enter your email address"/>
-    </div>
+    <Option>
+      <input onChange={setResponse} placeholder="john.doe@gmail.com" />
+    </Option>
   );
 };
 

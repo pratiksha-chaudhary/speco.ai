@@ -1,4 +1,4 @@
-@import '../../styling/colors.scss';
+@import '../../styling';
 
 .MultipleYesNoChoiceForm {
     display: flex;
@@ -8,11 +8,12 @@
         display: flex;
         justify-content: space-between;
         padding: 1rem;
-        border: 2px solid $speco-light-blue;
-        border-radius: 10px;
-        width: 80%;
+        border: $speco-option-border;
+        border-radius: 1.5rem;
+        width: 95%;
         margin: 1rem auto;
         position: relative;
+        font-size: 1.8rem;
 
         .toggle {
             position: relative;

@@ -1,18 +1,5 @@
-@import '../../styling/colors.scss';
+@import '../../styling';
 
 .DefaultChoiceForm {
-    div {
-        padding: 1rem 0 1rem 1rem;
-        border: 2px solid $speco-light-blue;
-        border-radius: 10px;
-        width: 80%;
-        margin: 1rem auto;
-    }
-
-    div.selected {
-        border: 2px solid $speco-green;
-        background-image: url("../../assets/images/icons/icon-checked-circle.svg");
-        background-position: right 20px center;
-        background-repeat: no-repeat;
-    }
+    padding: 1.4rem 0;
 }

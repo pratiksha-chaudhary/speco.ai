@@ -5,7 +5,7 @@ const PhoneNumber = ({ setResponse }) => {
   return (
     <PhoneInput
       defaultCountry="IN"
-      placeholder="Enter your phone number"
+      placeholder="81234 56789"
       onChange={setResponse}
     />
   );

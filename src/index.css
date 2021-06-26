@@ -6,18 +6,28 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('./assets/fonts/icons/icomoon.ttf?65ysi5') format('truetype'),
-        url('./assets/fonts/icons/icomoon.woff?65ysi5') format('woff');
+  src: url('./assets/fonts/icons/icomoon.ttf?65ysi5') format('truetype'),
+    url('./assets/fonts/icons/icomoon.woff?65ysi5') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
 }

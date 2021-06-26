@@ -1,18 +1,31 @@
-@import '../../styling/colors.scss';
+@import '../../styling';
 
 .PhoneInput {
-    padding: 1rem 0 1rem 1rem;
-    border: 2px solid $speco-light-blue;
-    border-radius: 10px;
-    width: 80%;
+    padding: 1.4rem 0;
+    border: $speco-option-border;
+    border-radius: 1.5rem;
+    width: 95%;
     margin: 0 auto;
     input {
-        font-size: 20px;
+        font-size: 1.8rem;
         border: none;
         margin-left: 1rem;
     }
 
     input:focus-visible {
         outline: none;
+    }
+
+    .PhoneInputCountryIcon {
+        width: 2.5rem;
+        height: 2rem;
+        box-shadow: none;
+        margin: 0 1rem;
+    }
+
+    .PhoneInputCountrySelectArrow {
+        width: 0.5rem;
+        height: 0.5rem;
+        opacity: 1;
     }
 }

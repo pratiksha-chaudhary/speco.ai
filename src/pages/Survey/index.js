@@ -21,7 +21,8 @@ function Survey() {
 
   return (
     <div className="Survey">
-      <h2>{targetQuestions[id].question}</h2>
+      <h2 className="question">{targetQuestions[id].question}</h2>
+      <p className="description">{targetQuestions[id].description}</p>
       {pageIndex < targetQuestions.length - 1 && (
         <>
           {<TemplateComponent setResponse={setResponse} options={targetQuestions[id].options}/>}
