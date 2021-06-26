@@ -6,32 +6,39 @@ const MultipleYesNoChoiceForm = ({ options, setResponse, freeFieldNeeded }) => {
   const [checked, setChecked] = useState(new Array(options.length).fill(false));
   const handleClick = (val, index) => {
     setCurrentSelection(val);
-    setResponse(val);
     setChecked((prev) => {
-      prev[index] = !prev[index];
-      return [...prev];
+      const updated = [...prev];
+      updated[index] = !prev[index];
+      setResponse(updated);
+      return updated;
     });
   };
   return (
     <div className="MultipleYesNoChoiceForm">
       {options.map((option, i) => (
-        <>
-          <label
-            className={`option ${currentSelection === option && 'selected'}`}
-            key={i}
-          >
-            <span>{option}</span>
-            <div class="toggle">
-              <input id="switch" type="checkbox" />
-              <label for="switch" className="on-button">
-                On
-              </label>
-              <label for="switch" className="off-button">
-                Off
-              </label>
-            </div>
-          </label>
-        </>
+        <label
+          className={`option ${currentSelection === option && 'selected'} ${i}`}
+          key={i}
+        >
+          <span>{option}</span>
+          <div className="toggle">
+            <input
+              name="switch"
+              type="checkbox"
+              value={checked[i]}
+              onChange={() => {
+                handleClick(option, i);
+              }}
+              defaultChecked={false}
+            />
+            <label htmlFor="switch" className="on-button">
+              Yes
+            </label>
+            <label htmlFor="switch" className="off-button">
+              No
+            </label>
+          </div>
+        </label>
       ))}
       {freeFieldNeeded && (
         <div className="option">

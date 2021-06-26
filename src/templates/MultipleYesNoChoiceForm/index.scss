@@ -55,14 +55,14 @@
 
             .on-button {
                 position: absolute;
+                pointer-events: none;
                 visibility: hidden;
-                transition: visibility 1s linear 300ms;
                 left: 8%;
             }
 
             .off-button {
                 position: absolute;
-                transition: visibility 1s linear 300ms;
+                pointer-events: none;
                 right: 8%;
             }
 

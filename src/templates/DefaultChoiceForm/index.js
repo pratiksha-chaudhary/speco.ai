@@ -9,9 +9,10 @@ const DefaultChoiceForm = ({ options, setResponse, freeFieldNeeded }) => {
   };
   return (
     <div className="DefaultChoiceForm">
-      {options.map((option) => (
+      {options.map((option, i) => (
         <div
-          className={`option ${currentSelection === option && "selected"}`}
+          key={i}
+          className={`option ${currentSelection === option && 'selected'}`}
           onClick={() => handleClick(option)}
         >
           {option}
