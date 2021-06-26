@@ -1,0 +1,21 @@
+@import '../../styling/';
+
+.Option {
+    padding: 1.4rem 0;
+    border: $speco-option-border;
+    border-radius: 1.5rem;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+
+.Option + .Option {
+    margin-top: 1.5rem;
+}
+
+.Option.selected {
+    border: 0.2rem solid $speco-green;
+    background-image: url('../../assets/images/icons/icon-checked-circle.svg');
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+}
