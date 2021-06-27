@@ -3,15 +3,11 @@
 
 .App {
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 
-    @include from-small() {
-
-    }
-
     @include from-medium(){
-        width: 80%;
+        width: 70%;
     }
 
     @include from-large(){
@@ -19,7 +15,7 @@
     }
 
     @include from-extra-large(){
-        width: 55%;
+        width: 30%;
     }
 
     .doctor-icon:before {

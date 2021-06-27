@@ -20,12 +20,17 @@ function Survey() {
   const TemplateComponent = targetQuestions[id].template;
 
   return (
-    <div className="Survey">
+    <>
       <h2 className="question">{targetQuestions[id].question}</h2>
       <p className="description">{targetQuestions[id].description}</p>
       {pageIndex < targetQuestions.length - 1 && (
         <>
-          {<TemplateComponent setResponse={setResponse} options={targetQuestions[id].options}/>}
+          {
+            <TemplateComponent
+              setResponse={setResponse}
+              options={targetQuestions[id].options}
+            />
+          }
           <SubmitButton
             text="Next"
             nextRoute={`/survey/${id + 1}`}
@@ -36,7 +41,7 @@ function Survey() {
       {pageIndex >= targetQuestions.length - 1 && (
         <SubmitButton text="Next" nextRoute="/submit" />
       )}
-    </div>
+    </>
   );
 }
 export default Survey;

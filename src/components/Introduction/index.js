@@ -3,7 +3,7 @@ import "./index.scss";
 
 function Introduction() {
     return (
-        <div className="Introduction">
+        <>
             <div className="introduction-header">
                 <div className="icon-icon-vision"></div>
                 <div className="brief-vision">
@@ -18,7 +18,7 @@ function Introduction() {
             <p className="healthcare-info">
                 Please help us to provide some information in healthcare
             </p>
-        </div>
+        </>
     );
 }
 

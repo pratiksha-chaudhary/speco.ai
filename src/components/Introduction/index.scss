@@ -1,51 +1,48 @@
-@import '../../styling/media-queries.scss';
-@import '../../styling/colors.scss';
-.Introduction {
-    .introduction-header {
-        text-align: center;
-        position: relative;
-        background-color: #ecf1f7;
-        padding: 1em 0;
-        border-radius: 20px;
+@import '../../styling';
 
-        .brief-vision {
-            padding: 0 25px;
-            h3 {
-                font-size: 30px;
-                margin: 50px 0 0px;
-                font-weight: 600;
-            }
-            .summary {
-                font-size: 18px;
-                padding-left: 3px;
-                padding-right: 3px;
-                margin-top: 5px;
-            }
+.introduction-header {
+    text-align: center;
+    position: relative;
+    background-color: $speco-white;
+    padding: 1rem 0;
+    border-radius: 2rem;
+    margin: 8rem auto 0;
+
+    .brief-vision {
+        padding: 0 2.5rem;
+        h3 {
+            font-size: 3rem;
+            margin: 5rem 0 0;
+            font-weight: 600;
         }
-
-        .icon-icon-vision {
-            font-family: 'icomoon' !important;
-            color: $speco-green;
-            font-size: 74px;
-            line-height: 74px;
-            position: absolute;
-            left: calc(50% - 37px);
-            top: -25px;
-
-            @include from-medium() {
-                font-size: 90px;
-                line-height: 90px;
-                left: calc(50% - 45px);
-                top: -38px;
-            }
-        }
-        .icon-icon-vision:before {
-            content: '\e904';
+        .summary {
+            font-size: 1.8rem;
+            margin-top: 0.5rem;
         }
     }
-    .healthcare-info {
-        font-size: 20px;
-        font-weight: 500;
-        margin: 3em auto 1em;
+
+    .icon-icon-vision {
+        font-family: 'icomoon' !important;
+        color: $speco-green;
+        font-size: 7.4rem;
+        line-height: 7.4rem;
+        position: absolute;
+        left: calc(50% - 37px);
+        top: -25px;
+
+        @include from-medium() {
+            font-size: 9rem;
+            line-height: 9rem;
+            left: calc(50% - 4.5rem);
+            top: -3.8rem;
+        }
     }
+    .icon-icon-vision:before {
+        content: '\e904';
+    }
+}
+.healthcare-info {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 7rem auto 1rem;
 }

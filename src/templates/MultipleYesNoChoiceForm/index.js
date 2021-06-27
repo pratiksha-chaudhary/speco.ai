@@ -1,50 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Option from '../../components/Option';
+import SwitchToggle from '../../components/SwitchToggle';
 import './index.scss';
 
-const MultipleYesNoChoiceForm = ({ options, setResponse, freeFieldNeeded }) => {
-  const [currentSelection, setCurrentSelection] = useState();
+const MultipleYesNoChoiceForm = ({ options, setResponse }) => {
   const [checked, setChecked] = useState(new Array(options.length).fill(false));
   const handleClick = (val, index) => {
-    setCurrentSelection(val);
     setChecked((prev) => {
       const updated = [...prev];
       updated[index] = !prev[index];
-      setResponse(updated);
       return updated;
     });
   };
+
+  useEffect(() => {
+    setResponse(checked);
+  }, [checked, setResponse]);
+
   return (
     <div className="MultipleYesNoChoiceForm">
       {options.map((option, i) => (
-        <label
-          className={`option ${currentSelection === option && 'selected'} ${i}`}
-          key={i}
-        >
+        <Option selected={false} key={i} className="toggle-option">
           <span>{option}</span>
-          <div className="toggle">
-            <input
-              name="switch"
-              type="checkbox"
-              value={checked[i]}
-              onChange={() => {
-                handleClick(option, i);
-              }}
-              defaultChecked={false}
+          <label className="container-label">
+            <SwitchToggle
+              className="switch-toggle"
+              overrideLabel={true}
+              onClick={() => handleClick(option, i)}
             />
-            <label htmlFor="switch" className="on-button">
-              Yes
-            </label>
-            <label htmlFor="switch" className="off-button">
-              No
-            </label>
-          </div>
-        </label>
+          </label>
+        </Option>
       ))}
-      {freeFieldNeeded && (
-        <div className="option">
-          <input />
-        </div>
-      )}
     </div>
   );
 };

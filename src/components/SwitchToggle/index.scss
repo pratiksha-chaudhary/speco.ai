@@ -1,0 +1,67 @@
+.SwitchToggle {
+    position: relative;
+    width: 80px;
+    height: 40px;
+
+    input {
+        display: none;
+    }
+
+    .slider {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: grey;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 0 6px;
+        transition: 0.4s ease-in-out;
+    }
+
+    .slider::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        background: whitesmoke;
+        transition: 0.4s ease-in-out;
+    }
+
+    input + .slider {
+        transition: 0.1s ease-in-out;
+        .toggle-on {
+            opacity: 0;
+            width: 100%;
+            transition: 0.2s ease-in-out;
+        }
+        .toggle-off {
+            opacity: 1;
+            width: 100%;
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    input:checked + .slider::before {
+        left: 42px;
+    }
+
+    input:checked + .slider {
+        background: green;
+        .toggle-on {
+            opacity: 1;
+        }
+        .toggle-off {
+            opacity: 0;
+        }
+    }
+}
+
+.SwitchToggle.label {
+    display: inline-block;
+}

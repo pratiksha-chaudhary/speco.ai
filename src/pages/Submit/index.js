@@ -1,10 +1,14 @@
 import SubmitButton from '../../components/SubmitButton';
+import ThanksIcon from '../../assets/images/icons/icon-thankyou.svg';
+import './index.scss';
 
 const Submit = () => {
   return (
-    <div>
-      Thanks<SubmitButton text="Back Home" nextRoute="/"></SubmitButton>
-    </div>
+    <>
+      <img className="done" src={ThanksIcon} alt="check mark" />
+      <div className="heading">Thank you</div>
+      <SubmitButton text="Back Home" nextRoute="/"></SubmitButton>
+    </>
   );
 };
 

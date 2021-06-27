@@ -1,13 +1,10 @@
-@import "../../styling/media-queries.scss";
+@import '../../styling/media-queries.scss';
 
-.Register {
+.header {
+    font-size: 34px;
+}
 
-    .header {
-        font-size: 34px;
-    }
-
-    .user-list {
-        display: flex;
-        justify-content: space-between;
-    }
+.user-list {
+    display: flex;
+    justify-content: space-between;
 }

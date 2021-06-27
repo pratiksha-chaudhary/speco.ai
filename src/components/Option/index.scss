@@ -1,7 +1,7 @@
 @import '../../styling/';
 
 .Option {
-    padding: 1.4rem 0;
+    padding: 1.4rem 1rem;
     border: $speco-option-border;
     border-radius: 1.5rem;
     width: 95%;
@@ -16,6 +16,6 @@
 .Option.selected {
     border: 0.2rem solid $speco-green;
     background-image: url('../../assets/images/icons/icon-checked-circle.svg');
-    background-position: right 0.5rem center;
+    background-position: top 0.3rem right;
     background-repeat: no-repeat;
 }
