@@ -6,5 +6,11 @@
 
 .user-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 0;
 }

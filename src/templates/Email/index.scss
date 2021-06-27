@@ -3,7 +3,11 @@
 input {
     font-size: 1.8rem;
     border: none;
-    width: 95%;
+    width: 85%;
+
+    @include from-medium() {
+        width: 75%;
+    }
 }
 
 input:focus-visible {

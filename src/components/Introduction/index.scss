@@ -6,7 +6,11 @@
     background-color: $speco-white;
     padding: 1rem 0;
     border-radius: 2rem;
-    margin: 8rem auto 0;
+    margin: 3rem auto 0;
+
+    @include from-medium() {
+        margin: 8rem auto 0;
+    }
 
     .brief-vision {
         padding: 0 2.5rem;
@@ -44,5 +48,10 @@
 .healthcare-info {
     font-size: 2rem;
     font-weight: 500;
-    margin: 7rem auto 1rem;
+    margin: 3rem auto 1rem;
+
+
+    @include from-medium() {
+        margin: 7rem auto 1rem;
+    }
 }

@@ -1,10 +1,15 @@
-@import '../../styling/media-queries.scss';
-@import '../../styling/colors.scss';
+@import '../../styling';
 
 .User {
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    width: 20rem;
+    max-width: 15rem;
+
+    @include from-medium() {
+        max-width: 35rem;
+    }
+
     .icon-container {
         display: flex;
         flex-direction: row;
@@ -15,6 +20,7 @@
         border: 0.2rem solid #cddbec;
         font-size: 9rem;
         padding: 2rem;
+        margin-bottom: 1rem;
 
         @include from-small() {
             font-size: 11rem;
@@ -31,7 +37,7 @@
 
     .icon-container.selected {
         border-color: $speco-green;
-        background-image: url("../../assets/images/icons/icon-checked-circle.svg");
+        background-image: url('../../assets/images/icons/icon-checked-circle.svg');
         background-position: right 10px top 10px;
         background-repeat: no-repeat;
     }

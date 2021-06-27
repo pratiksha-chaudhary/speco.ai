@@ -8,38 +8,41 @@ import {
   patientSurveyQuestions,
 } from './survey-questions';
 import './index.scss';
+import BackButton from '../../components/BackButton';
 
 function Survey() {
   const [response, setResponse] = useState();
   const { pageIndex } = useParams();
   const { user } = useContext(UserContext);
-  const targetQuestions =
+  const questions =
     user === userType.PATIENT ? patientSurveyQuestions : doctorSurveyQuestions;
   const id = parseInt(pageIndex);
 
-  const TemplateComponent = targetQuestions[id].template;
+  const TemplateComponent = questions[id].template;
 
   return (
     <>
-      <h2 className="question">{targetQuestions[id].question}</h2>
-      <p className="description">{targetQuestions[id].description}</p>
-      {pageIndex < targetQuestions.length - 1 && (
+      <h2 className="question">{questions[id].question}</h2>
+      <p className="description">{questions[id].description}</p>
+      {pageIndex < questions.length && (
         <>
-          {
-            <TemplateComponent
-              setResponse={setResponse}
-              options={targetQuestions[id].options}
-            />
-          }
-          <SubmitButton
-            text="Next"
-            nextRoute={`/survey/${id + 1}`}
-            disabled={!response}
+          <TemplateComponent
+            setResponse={setResponse}
+            options={questions[id].options}
           />
+
+          <div className="navigation">
+            {id === 0 && <BackButton nextRoute={`/register`} />}
+            {id > 0 && <BackButton nextRoute={`/survey/${id - 1}`} />}
+            <SubmitButton
+              text="Next"
+              nextRoute={
+                id === questions.length - 1 ? '/submit' : `/survey/${id + 1}`
+              }
+              disabled={!response}
+            />
+          </div>
         </>
-      )}
-      {pageIndex >= targetQuestions.length - 1 && (
-        <SubmitButton text="Next" nextRoute="/submit" />
       )}
     </>
   );

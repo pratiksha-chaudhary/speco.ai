@@ -4,12 +4,18 @@
     padding: 1.4rem 0;
     border: $speco-option-border;
     border-radius: 1.5rem;
-    width: 95%;
+    width: 85%;
     margin: 0 auto;
+
+
+    @include from-medium() {
+        width: 75%;
+    }
+
     input {
         font-size: 1.8rem;
         border: none;
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
 
     input:focus-visible {

@@ -4,6 +4,7 @@ import SubmitButton from '../../components/SubmitButton';
 import User from '../../components/User';
 import userType from '../../constants/user-type';
 import './index.scss';
+import BackButton from '../../components/BackButton';
 
 function Register() {
   const { user, setUser } = useContext(UserContext);
@@ -24,7 +25,10 @@ function Register() {
           currentUser={user}
         />
       </div>
-      <SubmitButton text="Next" nextRoute={`/survey/0`} disabled={!user} />
+      <div className="navigation">
+        <BackButton nextRoute={`/`} />
+        <SubmitButton text="Next" nextRoute={`/survey/0`} disabled={!user} />
+      </div>
     </>
   );
 }
