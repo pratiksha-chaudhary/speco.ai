@@ -1,23 +1,36 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import SubmitButton from '../../components/SubmitButton';
+import BackButton from '../../components/BackButton';
 import { useParams } from 'react-router-dom';
 import UserContext from '../../context/userContext';
-import userType from '../../constants/user-type';
+import USER_TYPE from '../../constants/user-type';
 import {
   doctorSurveyQuestions,
   patientSurveyQuestions,
 } from './survey-questions';
 import './index.scss';
-import BackButton from '../../components/BackButton';
 
 function Survey() {
-  const [response, setResponse] = useState();
+  const [surveyData, fillSurveyData] = useState({});
   const { pageIndex } = useParams();
-  const { user } = useContext(UserContext);
+  const { userType } = useContext(UserContext);
   const questions =
-    user === userType.PATIENT ? patientSurveyQuestions : doctorSurveyQuestions;
+    userType === USER_TYPE.PATIENT
+      ? patientSurveyQuestions
+      : doctorSurveyQuestions;
   const id = parseInt(pageIndex);
+  const questionId = questions[id].id;
 
+  const setResponse = useCallback(
+    (res) => {
+      fillSurveyData((prev) => {
+        const updated = { ...prev };
+        updated[questionId] = res;
+        return updated;
+      });
+    },
+    [questionId, fillSurveyData]
+  );
   const TemplateComponent = questions[id].template;
 
   return (
@@ -27,6 +40,7 @@ function Survey() {
       {pageIndex < questions.length && (
         <>
           <TemplateComponent
+            key={id}
             setResponse={setResponse}
             options={questions[id].options}
           />
@@ -39,7 +53,7 @@ function Survey() {
               nextRoute={
                 id === questions.length - 1 ? '/submit' : `/survey/${id + 1}`
               }
-              disabled={!response}
+              disabled={!surveyData[questionId]}
             />
           </div>
         </>

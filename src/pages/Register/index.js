@@ -2,32 +2,32 @@ import React, { useContext } from 'react';
 import UserContext from '../../context/userContext';
 import SubmitButton from '../../components/SubmitButton';
 import User from '../../components/User';
-import userType from '../../constants/user-type';
+import USER_TYPE from '../../constants/user-type';
 import './index.scss';
 import BackButton from '../../components/BackButton';
 
 function Register() {
-  const { user, setUser } = useContext(UserContext);
+  const { userType, setUserType } = useContext(UserContext);
   return (
     <>
       <h2 className="header">I am a</h2>
       <div className="user-list">
         <User
-          userType={userType.DOCTOR}
+          userType={USER_TYPE.DOCTOR}
           title="Medical Practitioner"
-          setUserType={setUser}
-          currentUser={user}
+          setUserType={setUserType}
+          currentUser={userType}
         />
         <User
-          userType={userType.PATIENT}
+          userType={USER_TYPE.PATIENT}
           title="Patient"
-          setUserType={setUser}
-          currentUser={user}
+          setUserType={setUserType}
+          currentUser={userType}
         />
       </div>
       <div className="navigation">
         <BackButton nextRoute={`/`} />
-        <SubmitButton text="Next" nextRoute={`/survey/0`} disabled={!user} />
+        <SubmitButton text="Next" nextRoute={`/survey/0`} disabled={!userType} />
       </div>
     </>
   );
