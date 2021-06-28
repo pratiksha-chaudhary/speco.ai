@@ -9,6 +9,7 @@ import {
   patientSurveyQuestions,
 } from './survey-questions';
 import './index.scss';
+import ProgressBar from '../../components/ProgressBar';
 
 function Survey() {
   const [surveyData, fillSurveyData] = useState({});
@@ -35,6 +36,7 @@ function Survey() {
 
   return (
     <>
+      <ProgressBar currentProgress={id} total={questions.length} />
       <h2 className="question">{questions[id].question}</h2>
       <p className="description">{questions[id].description}</p>
       {pageIndex < questions.length && (

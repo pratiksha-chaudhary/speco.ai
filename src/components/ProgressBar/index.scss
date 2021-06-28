@@ -1,0 +1,18 @@
+@import '../../styling/colors.scss';
+
+.ProgressBar {
+    display: flex;
+    margin: 2rem;
+
+    .current-progress {
+        flex: 1;
+        background:$speco-green;
+        height: 5px;
+    }
+
+    .left-progress {
+        flex: 1;
+        background: $speco-grey;
+        height: 5px;
+    }
+}
