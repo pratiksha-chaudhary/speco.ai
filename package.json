@@ -2,7 +2,7 @@
   "name": "speco.ai",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/pratiksha-chaudhary/speco.ai",
+  "homepage": "https://pratiksha-chaudhary.github.io/speco.ai",
   "dependencies": {
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
