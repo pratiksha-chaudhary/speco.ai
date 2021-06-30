@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/speco.ai/static/css/main.2dd9d175.chunk.css",
-    "main.js": "/speco.ai/static/js/main.2d846cb7.chunk.js",
-    "main.js.map": "/speco.ai/static/js/main.2d846cb7.chunk.js.map",
+    "main.js": "/speco.ai/static/js/main.6cd26a2c.chunk.js",
+    "main.js.map": "/speco.ai/static/js/main.6cd26a2c.chunk.js.map",
     "runtime-main.js": "/speco.ai/static/js/runtime-main.df6d6301.js",
     "runtime-main.js.map": "/speco.ai/static/js/runtime-main.df6d6301.js.map",
     "static/css/2.086ec6e4.chunk.css": "/speco.ai/static/css/2.086ec6e4.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.086ec6e4.chunk.css",
     "static/js/2.14ab4e6b.chunk.js",
     "static/css/main.2dd9d175.chunk.css",
-    "static/js/main.2d846cb7.chunk.js"
+    "static/js/main.6cd26a2c.chunk.js"
   ]
 }
