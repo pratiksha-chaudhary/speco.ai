@@ -13,7 +13,7 @@ function App() {
         <div className="App">
             <UserProvider>
                 <Header />
-                <Router>
+                <Router basename={process.env.PUBLIC_URL}>
                     <Switch>
                         <Route exact path="/">
                             <Home />
