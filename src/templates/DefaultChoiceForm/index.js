@@ -15,6 +15,8 @@ const DefaultChoiceForm = ({ options, setResponse, freeFieldNeeded }) => {
           key={i}
           onClick={() => handleClick(option)}
           selected={currentSelection === option}
+          selectionClass="single-choice-selection"
+          className="option-padding"
         >
           {option}
         </Option>

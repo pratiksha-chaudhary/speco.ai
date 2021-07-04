@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useState } from 'react';
 import SubmitButton from '../../components/SubmitButton';
 import BackButton from '../../components/BackButton';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import UserContext from '../../context/userContext';
 import USER_TYPE from '../../constants/user-type';
 import {
@@ -11,17 +11,18 @@ import {
 import './index.scss';
 import ProgressBar from '../../components/ProgressBar';
 
+const questionSet = {
+  [USER_TYPE.PATIENT]: patientSurveyQuestions,
+  [USER_TYPE.DOCTOR]: doctorSurveyQuestions,
+};
+
 function Survey() {
   const [surveyData, fillSurveyData] = useState({});
   const { pageIndex } = useParams();
   const { userType } = useContext(UserContext);
-  const questions =
-    userType === USER_TYPE.PATIENT
-      ? patientSurveyQuestions
-      : doctorSurveyQuestions;
+  const questions = questionSet[userType];
   const id = parseInt(pageIndex);
-  const questionId = questions[id].id;
-
+  const questionId = questions && questions[id].id;
   const setResponse = useCallback(
     (res) => {
       fillSurveyData((prev) => {
@@ -32,6 +33,11 @@ function Survey() {
     },
     [questionId, fillSurveyData]
   );
+
+  if (!questions || questions.length < pageIndex) {
+    return <Redirect to="/" />;
+  }
+
   const TemplateComponent = questions[id].template;
 
   return (

@@ -1,37 +1,41 @@
-@import "./styling/media-queries.scss";
-@import "./styling/colors.scss";
+@import './styling/media-queries.scss';
+@import './styling/colors.scss';
 
 .App {
     text-align: center;
     width: 95%;
     margin: 0 auto;
 
-    @include from-small(){
+    @include from-small() {
         width: 90%;
     }
 
-    @include from-medium(){
+    @include from-medium() {
         width: 70%;
     }
 
-    @include from-large(){
+    @include from-large() {
         width: 60%;
     }
 
-    @include from-extra-large(){
+    @include from-extra-large() {
         width: 30%;
     }
 
     .doctor-icon:before {
-        content: "\e901";
+        content: '\e901';
     }
 
     .patient-icon:before {
-        content: "\e902";
+        content: '\e902';
     }
 
     .doctor-icon.selected:before,
     .patient-icon.selected:before {
         color: $speco-green;
+    }
+
+    .option-padding {
+        padding: 1.4rem 3rem;
     }
 }

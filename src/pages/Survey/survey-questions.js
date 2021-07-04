@@ -1,5 +1,6 @@
 import DefaultChoiceForm from '../../templates/DefaultChoiceForm';
 import Email from '../../templates/Email';
+import DefaultMultipleChoiceForm from '../../templates/DefaultMultipleChoiceForm';
 import MultipleYesNoChoiceForm from '../../templates/MultipleYesNoChoiceForm';
 import PhoneNumber from '../../templates/PhoneNumber';
 
@@ -73,16 +74,13 @@ export const doctorSurveyQuestions = [
   },
   {
     question:
-      'Will you be more interested if certain parameters of a patient are provided to you before you start your consultation so better diagnosis can be achieved leading to satisfied patient care?',
-    id: '109',
-    description:
       'Would you prefer patient sending his details beforehand for you to judge the acuity of case?',
+    id: '109',
     options: ['Yes', 'No'],
     template: DefaultChoiceForm,
   },
   {
-    question:
-      'Is your patient journey fragmented or smooth? Is your patient happy with the entire experience?',
+    question: 'Is your patient journey fragmented or smooth?',
     id: '110',
     options: ['Yes', 'No'],
     template: DefaultChoiceForm,
@@ -95,8 +93,7 @@ export const doctorSurveyQuestions = [
     template: DefaultChoiceForm,
   },
   {
-    question:
-      'Do you feel your current system effectively takes feedback from patients?',
+    question: 'Do you get effective feedback from your patients?',
     id: '112',
     options: ['Yes', 'No'],
     template: DefaultChoiceForm,
@@ -124,15 +121,15 @@ export const patientSurveyQuestions = [
     question: 'What concerns you most when accessing care',
     id: '116',
     options: [
-      'Type',
-      'Credibility of doctors',
-      'Right doctor',
-      'Location',
-      'Price',
-      'Past experience',
-      'Diagnostic labs',
+      { name: 'Type', id: 1 },
+      { name: 'Credibility of doctors', id: 2 },
+      { name: 'Right doctor', id: 3 },
+      { name: 'Location', id: 4 },
+      { name: 'Price', id: 5 },
+      { name: 'Past experience', id: 6 },
+      { name: 'Diagnostic labs', id: 7 },
     ],
-    template: DefaultChoiceForm,
+    template: DefaultMultipleChoiceForm,
   },
   {
     question:

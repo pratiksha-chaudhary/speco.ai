@@ -1,9 +1,9 @@
 import './index.scss';
 
-const Option = ({ onClick, selected, children, className }) => {
+const Option = ({ onClick, selected, children, className, selectionClass }) => {
   return (
     <div
-      className={`Option ${selected && 'selected'} ${className}`}
+      className={`Option ${selected && selectionClass} ${className}`}
       onClick={onClick || (() => {})}
     >
       {children}

@@ -20,9 +20,14 @@ const MultipleYesNoChoiceForm = ({ options, setResponse }) => {
   return (
     <div className="MultipleYesNoChoiceForm">
       {options.map((option, i) => (
-        <Option selected={false} key={i} className="toggle-option">
-          <span>{option}</span>
-          <label className="container-label">
+        <Option
+          selected={false}
+          key={i}
+          className="toggle-option"
+          selectionClass="single-choice-selection"
+        >
+          <label className="container-label option-padding">
+            <span>{option}</span>
             <SwitchToggle
               className="switch-toggle"
               overrideLabel={true}

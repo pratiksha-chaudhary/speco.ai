@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import UserContext from '../../context/userContext';
@@ -6,10 +6,14 @@ import './index.scss';
 const PhoneNumber = ({ setResponse }) => {
   const { userPhone, setUserPhone } = useContext(UserContext);
 
+  useEffect(() => {
+    setResponse(userPhone);
+  }, [userPhone, setResponse]);
+
   const onChange = (val) => {
     setResponse(val);
     setUserPhone(val);
-  }
+  };
   return (
     <PhoneInput
       defaultCountry="IN"
