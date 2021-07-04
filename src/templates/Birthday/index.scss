@@ -1,0 +1,29 @@
+@import '../../styling/';
+
+input {
+    font-size: 1.8rem;
+    border: none;
+    width: 85%;
+
+    @include from-medium() {
+        width: 75%;
+    }
+}
+
+.error {
+    border: 1px solid red;
+}
+input:focus-visible {
+    outline: none;
+}
+
+.custom {
+    font-size: 1.8rem;
+}
+.MuiFormControl-root {
+    width: 100%;
+    color: $speco-white;
+    .MuiInputBase-root {
+        font-size: 1.8rem;
+    }
+}

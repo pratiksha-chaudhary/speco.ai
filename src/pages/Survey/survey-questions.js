@@ -3,6 +3,7 @@ import Email from '../../templates/Email';
 import DefaultMultipleChoiceForm from '../../templates/DefaultMultipleChoiceForm';
 import MultipleYesNoChoiceForm from '../../templates/MultipleYesNoChoiceForm';
 import PhoneNumber from '../../templates/PhoneNumber';
+import Birthday from '../../templates/Birthday';
 
 export const doctorSurveyQuestions = [
   {
@@ -14,6 +15,11 @@ export const doctorSurveyQuestions = [
     question: 'Please provide us your email',
     id: '101',
     template: Email,
+  },
+  {
+    question: 'When is your birthday',
+    id: '125',
+    template: Birthday,
   },
   {
     question: 'Is your practice automated?',
@@ -116,6 +122,11 @@ export const patientSurveyQuestions = [
     question: 'Please provide us your email',
     id: '115',
     template: Email,
+  },
+  {
+    question: 'When is your birthday',
+    id: '126',
+    template: Birthday,
   },
   {
     question: 'What concerns you most when accessing care',
