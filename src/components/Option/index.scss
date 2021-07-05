@@ -2,23 +2,23 @@
 
 .Option {
     border: $speco-option-border;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     width: 95%;
     margin: 0 auto;
-    font-size: 1.8rem;
+    font-size: 1.1rem;
 }
 
 .Option + .Option {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .Option.single-choice-selection {
-    border: 0.2rem solid $speco-green;
+    border: 2px solid $speco-green;
     background-image: url('../../assets/images/icons/icon-checked-circle.svg');
-    background-position: top 50% right 0.5rem;
+    background-position: top 50% right 5px;
     background-repeat: no-repeat;
 }
 
 .Option.multiple-choice-selection {
-    border: 0.2rem solid $speco-green;
+    border: 2px solid $speco-green;
 }

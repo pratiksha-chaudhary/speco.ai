@@ -1,7 +1,7 @@
 @import '../../styling/';
 
 input {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     border: none;
     width: 85%;
 
@@ -18,12 +18,12 @@ input:focus-visible {
 }
 
 .custom {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
 }
 .MuiFormControl-root {
     width: 100%;
     color: $speco-white;
     .MuiInputBase-root {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
     }
 }

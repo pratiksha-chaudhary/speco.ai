@@ -10,7 +10,7 @@ function Register() {
   const { userType, setUserType } = useContext(UserContext);
   return (
     <>
-      <h2 className="header">I am a</h2>
+      <h2 className="question">I am a</h2>
       <div className="user-list">
         <User
           userType={USER_TYPE.DOCTOR}

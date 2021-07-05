@@ -1,16 +1,12 @@
 @import '../../styling/media-queries.scss';
 
-.header {
-    font-size: 34px;
-}
-
 .user-list {
     display: flex;
     justify-content: space-around;
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: space-around;
-    margin: 5rem 0;
+    margin-top: 4rem;
 }

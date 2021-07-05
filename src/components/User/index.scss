@@ -3,11 +3,11 @@
 .User {
     display: flex;
     flex-direction: column;
-    width: 20rem;
-    max-width: 15rem;
+    width: 12.5rem;
+    max-width: 9.375rem;
 
     @include from-medium() {
-        max-width: 35rem;
+        max-width: 21.875rem;
     }
 
     .icon-container {
@@ -16,22 +16,22 @@
         justify-content: center;
         align-items: center;
         font-family: 'icomoon' !important;
-        border-radius: 2rem;
-        border: 0.2rem solid #cddbec;
-        font-size: 9rem;
-        padding: 2rem;
-        margin-bottom: 1rem;
+        border-radius: 1.25rem;
+        border: 2px solid #cddbec;
+        font-size: 5.625rem;
+        padding: 1.25rem;
+        margin-bottom: 0.625rem;
 
         @include from-small() {
-            font-size: 11rem;
-            max-width: 19rem;
-            max-height: 19rem;
+            font-size: 6.875rem;
+            max-width: 11.875rem;
+            max-height: 11.875rem;
         }
 
         @include from-medium() {
-            font-size: 13rem;
-            max-width: 21rem;
-            max-height: 21rem;
+            font-size: 8.125rem;
+            max-width: 13.125rem;
+            max-height: 13.125rem;
         }
     }
 

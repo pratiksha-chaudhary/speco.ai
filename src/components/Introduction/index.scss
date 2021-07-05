@@ -4,41 +4,40 @@
     text-align: center;
     position: relative;
     background-color: $speco-white;
-    padding: 1rem 0;
-    border-radius: 2rem;
-    margin: 3rem auto 0;
+    padding: 0.625rem 0;
+    border-radius: 1.25rem;
 
     @include from-medium() {
-        margin: 8rem auto 0;
+        margin: 5rem auto 0;
     }
 
     .brief-vision {
-        padding: 0 2.5rem;
+        padding: 0 1.56rem;
         h3 {
-            font-size: 3rem;
-            margin: 5rem 0 0;
+            font-size: 1.875rem;
+            margin: 3.125rem 0 0;
             font-weight: 600;
         }
         .summary {
-            font-size: 1.8rem;
-            margin-top: 0.5rem;
+            font-size: 1.125rem;
+            margin-top: 0.3125rem;
         }
     }
 
     .icon-icon-vision {
         font-family: 'icomoon' !important;
         color: $speco-green;
-        font-size: 7.4rem;
-        line-height: 7.4rem;
+        font-size: 4.625rem;
+        line-height: 4.625rem;
         position: absolute;
         left: calc(50% - 37px);
         top: -25px;
 
         @include from-medium() {
-            font-size: 9rem;
-            line-height: 9rem;
-            left: calc(50% - 4.5rem);
-            top: -3.8rem;
+            font-size: 5.625rem;
+            line-height: 5.625rem;
+            left: calc(50% - 2.8125rem);
+            top: -2.375rem;
         }
     }
     .icon-icon-vision:before {
@@ -46,12 +45,11 @@
     }
 }
 .healthcare-info {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    margin: 3rem auto 1rem;
-
+    margin: 1.8rem auto;
 
     @include from-medium() {
-        margin: 7rem auto 1rem;
+        margin: 2rem auto;
     }
 }

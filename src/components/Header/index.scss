@@ -1,15 +1,14 @@
 @import '../../styling/media-queries.scss';
 
 .Header {
-    margin: 1rem auto;
-    padding: 3rem 0;
-    width: 35rem;
-    max-width: 22rem;
+    margin: 2rem auto;
+    width: 21.875rem;
+    max-width: 13.75rem;
     @include from-medium() {
-        max-width: 30rem;
+        max-width: 18.75rem;
     }
 
     @include from-large() {
-        max-width: 35rem;
+        max-width: 21.875rem;
     }
 }

@@ -1,37 +1,43 @@
 @import '../../styling';
 
 .PhoneInput {
-    padding: 1.4rem 0;
+    padding: 1rem 0;
     border: $speco-option-border;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     width: 85%;
     margin: 0 auto;
-
 
     @include from-medium() {
         width: 75%;
     }
 
     input {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
         border: none;
-        margin-left: 2rem;
+        margin-left: 1.25rem;
     }
 
     input:focus-visible {
         outline: none;
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        box-shadow: 0 0 0 30px white inset !important;
+    }
+
     .PhoneInputCountryIcon {
-        width: 2.5rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.25rem;
         box-shadow: none;
-        margin: 0 1rem;
+        margin: 0 0.625rem;
     }
 
     .PhoneInputCountrySelectArrow {
-        width: 0.5rem;
-        height: 0.5rem;
+        width: 5px;
+        height: 5px;
         opacity: 1;
     }
 }
