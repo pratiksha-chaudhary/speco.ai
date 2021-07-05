@@ -10,20 +10,6 @@ input {
     }
 }
 
-.error {
-    border: 1px solid red;
-}
 input:focus-visible {
     outline: none;
-}
-
-.custom {
-    font-size: 1.1rem;
-}
-.MuiFormControl-root {
-    width: 100%;
-    color: $speco-white;
-    .MuiInputBase-root {
-        font-size: 1.1rem;
-    }
 }
